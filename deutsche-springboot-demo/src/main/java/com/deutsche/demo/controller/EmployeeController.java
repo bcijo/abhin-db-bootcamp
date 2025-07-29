@@ -23,12 +23,19 @@ public class EmployeeController {
 
     @GetMapping("emp")
     public List<Employee> getAllEmployees() {
+
         return empService.getAllEmployees();
     }
 
     @GetMapping("emp/{id}")
     public Employee getEmployeeById(@PathVariable(name = "id") Integer Id) {
+
         return empService.getEmployeeById(Id);
     }
 
+    //    http://localhost:8080/api/emp
+    @PostMapping("emp")
+    public Employee addEmployee(@RequestBody Employee employee) {
+        return empService.addEmployee(employee);
+    }
 }
