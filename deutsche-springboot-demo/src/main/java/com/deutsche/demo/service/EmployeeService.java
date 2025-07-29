@@ -25,6 +25,14 @@ public class EmployeeService {
     public Employee addEmployee(Employee employee) {
         return empRepository.save(employee);
     }
+
+    public boolean deleteEmployee(Integer id) {
+        if (empRepository.existsById(id)) {
+            empRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 }
 
 //

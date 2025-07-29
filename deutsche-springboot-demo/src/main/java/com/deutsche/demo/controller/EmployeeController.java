@@ -38,4 +38,12 @@ public class EmployeeController {
     public Employee addEmployee(@RequestBody Employee employee) {
         return empService.addEmployee(employee);
     }
+
+    @DeleteMapping("emp/{id}")
+    public String deleteEmployee(@PathVariable Integer id) {
+        boolean deleted = empService.deleteEmployee(id);
+        return deleted
+                ? "Employee with ID " + id + " deleted successfully."
+                : "Employee with ID " + id + " not found.";
+    }
 }
