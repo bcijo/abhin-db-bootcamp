@@ -9,4 +9,8 @@ public class EmployeeNotFoundException extends RuntimeException {
     public EmployeeNotFoundException(Integer id, String name) {
         super(id == -1 ? "No employees found with name '" + name + "'" : "Employee with the id " + id + " is not found!");
     }
+
+    public EmployeeNotFoundException(Integer id, Double salary) {
+        super(id == -1 ?  "No employees found with salary greater than " + salary + "." : "Employee with the id " + id + " is not found!");
+    }
 }

@@ -50,4 +50,10 @@ public class EmployeeController {
         logger.info("Searching for employees with name: {}", name);
         return empService.findEmployeeByName(name);
     }
+
+    @GetMapping("/salary")
+    public List<Employee> findEmployeeBySalaryGreaterThan(@RequestParam Double salary) {
+        logger.info("Searching for employees with Salary greater than : {}", salary);
+        return empService.findEmployeeBySalaryGreaterThan(salary);
+    }
 }

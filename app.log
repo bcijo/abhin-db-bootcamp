@@ -33,3 +33,55 @@
 2025-07-30T14:44:05.993+05:30  INFO 21500 --- [deutsche-springboot-demo] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2025-07-30T14:44:06.036+05:30  INFO 21500 --- [deutsche-springboot-demo] [http-nio-9090-exec-1] c.d.demo.controller.EmployeeController   : Searching for employees with name: Sonu
 2025-07-30T14:44:06.036+05:30 DEBUG 21500 --- [deutsche-springboot-demo] [http-nio-9090-exec-1] c.deutsche.demo.service.EmployeeService  : Searching for employees with name containing: Sonu
+2025-07-30T14:52:26.060+05:30  INFO 21500 --- [deutsche-springboot-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-30T14:52:26.189+05:30  INFO 21500 --- [deutsche-springboot-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-30T14:52:26.192+05:30  INFO 21500 --- [deutsche-springboot-demo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-30T14:52:26.195+05:30  INFO 21500 --- [deutsche-springboot-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-30T14:52:26.199+05:30  INFO 21500 --- [deutsche-springboot-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-30T14:52:32.778+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] com.deutsche.demo.App                    : Starting App using Java 17.0.1 with PID 16080 (C:\Users\abhin\IdeaProjects\db-training\abhin-db-bootcamp\deutsche-springboot-demo\target\classes started by abhin in C:\Users\abhin\IdeaProjects\db-training\abhin-db-bootcamp)
+2025-07-30T14:52:32.782+05:30 DEBUG 16080 --- [deutsche-springboot-demo] [main] com.deutsche.demo.App                    : Running with Spring Boot v3.5.4, Spring v6.2.9
+2025-07-30T14:52:32.783+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] com.deutsche.demo.App                    : No active profile set, falling back to 1 default profile: "default"
+2025-07-30T14:52:34.146+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-30T14:52:34.211+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2025-07-30T14:52:34.792+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9090 (http)
+2025-07-30T14:52:34.809+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-30T14:52:34.809+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.43]
+2025-07-30T14:52:34.892+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring embedded WebApplicationContext
+2025-07-30T14:52:34.893+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2047 ms
+2025-07-30T14:52:35.106+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-30T14:52:35.171+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-07-30T14:52:35.222+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-30T14:52:35.565+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-30T14:52:35.602+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-30T14:52:35.851+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e4ca109
+2025-07-30T14:52:35.853+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-30T14:52:35.957+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-07-30T14:52:37.429+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-30T14:52:37.510+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-30T14:52:38.116+05:30  WARN 16080 --- [deutsche-springboot-demo] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-30T14:52:38.785+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9090 (http) with context path '/api/v1'
+2025-07-30T14:52:38.802+05:30  INFO 16080 --- [deutsche-springboot-demo] [main] com.deutsche.demo.App                    : Started App in 6.881 seconds (process running for 7.868)
+2025-07-30T14:52:38.863+05:30  INFO 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-1] o.a.c.c.C.[.[localhost].[/api/v1]        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-30T14:52:38.864+05:30  INFO 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-30T14:52:38.867+05:30  INFO 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-30T14:52:39.856+05:30  INFO 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 534 ms
+2025-07-30T14:53:52.107+05:30  INFO 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-8] c.d.demo.controller.EmployeeController   : Fetching all employees
+2025-07-30T14:53:52.107+05:30  INFO 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-8] c.deutsche.demo.service.EmployeeService  : Retrieving all employees from the database
+2025-07-30T14:53:57.613+05:30  WARN 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'salary' for method parameter type Double is not present]
+2025-07-30T14:54:05.159+05:30  WARN 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'java.lang.Integer'; For input string: "salary{100}"]
+2025-07-30T14:54:23.938+05:30  INFO 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-2] c.d.demo.controller.EmployeeController   : Searching for employees with Salary greater than : 10000.0
+2025-07-30T14:54:23.939+05:30 DEBUG 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-2] c.deutsche.demo.service.EmployeeService  : Searching for employees with Salary greater than : 10000.0
+2025-07-30T14:54:34.934+05:30  INFO 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-9] c.d.demo.controller.EmployeeController   : Searching for employees with Salary greater than : 90000.0
+2025-07-30T14:54:34.934+05:30 DEBUG 16080 --- [deutsche-springboot-demo] [http-nio-9090-exec-9] c.deutsche.demo.service.EmployeeService  : Searching for employees with Salary greater than : 90000.0
+2025-07-30T15:35:32.104+05:30  INFO 16080 --- [deutsche-springboot-demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-30T15:35:32.480+05:30  INFO 16080 --- [deutsche-springboot-demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-30T15:35:32.489+05:30  INFO 16080 --- [deutsche-springboot-demo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-30T15:35:32.493+05:30  INFO 16080 --- [deutsche-springboot-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-30T15:35:32.500+05:30  INFO 16080 --- [deutsche-springboot-demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
