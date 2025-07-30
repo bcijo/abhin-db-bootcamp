@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class EmployeeService {
@@ -31,6 +32,9 @@ public class EmployeeService {
 
     public Employee addEmployee(Employee employee) {
         logger.info("Adding new employee: {}", employee.getName());
+        if (employee.getId() != null) {
+            throw new IllegalArgumentException("ID must not be set for new employees");
+        }
         return empRepository.save(employee);
     }
 
@@ -41,5 +45,18 @@ public class EmployeeService {
         } else {
             throw new EmployeeNotFoundException(id);
         }
+    }
+
+    public List<Employee> findEmployeeByName(String name) {
+        logger.debug("Searching for employees with name containing: {}", name);
+        List<Employee> allEmployees = empRepository.findAll();
+        List<Employee> matchingEmployees = allEmployees.stream()
+                .filter(emp -> emp.getName().toLowerCase().contains(name.toLowerCase()))
+                .collect(Collectors.toList());
+
+        if (matchingEmployees.isEmpty()) {
+            throw new EmployeeNotFoundException(-1); // Using -1 as a placeholder ID
+        }
+        return matchingEmployees;
     }
 }
