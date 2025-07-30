@@ -49,14 +49,7 @@ public class EmployeeService {
 
     public List<Employee> findEmployeeByName(String name) {
         logger.debug("Searching for employees with name containing: {}", name);
-        List<Employee> allEmployees = empRepository.findAll();
-        List<Employee> matchingEmployees = allEmployees.stream()
-                .filter(emp -> emp.getName().toLowerCase().contains(name.toLowerCase()))
-                .collect(Collectors.toList());
-
-        if (matchingEmployees.isEmpty()) {
-            throw new EmployeeNotFoundException(-1, name);
-        }
-        return matchingEmployees;
+        List<Employee> employees = empRepository.findByNameIgnoreCase(name);
+        return employees;
     }
 }
