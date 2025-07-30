@@ -44,4 +44,10 @@ public class EmployeeController {
         empService.deleteEmployee(id);
         return ResponseEntity.ok("Employee with ID " + id + " deleted successfully.");
     }
+
+    @GetMapping("/name")
+    public List<Employee> findEmployeeByName(@RequestParam String name) {
+        logger.info("Searching for employees with name: {}", name);
+        return empService.findEmployeeByName(name);
+    }
 }

@@ -25,7 +25,7 @@ public class EmployeeService {
     }
 
     public Employee getEmployeeById(Integer id) {
-        logger.info("Adding new employee");
+        logger.debug("Searching for employee with ID: {}", id);
         return empRepository.findById(id)
                 .orElseThrow(() -> new EmployeeNotFoundException(id));
     }
@@ -55,7 +55,7 @@ public class EmployeeService {
                 .collect(Collectors.toList());
 
         if (matchingEmployees.isEmpty()) {
-            throw new EmployeeNotFoundException(-1); // Using -1 as a placeholder ID
+            throw new EmployeeNotFoundException(-1, name);
         }
         return matchingEmployees;
     }
