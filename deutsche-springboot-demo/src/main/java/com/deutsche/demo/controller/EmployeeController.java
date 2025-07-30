@@ -4,42 +4,33 @@ import com.deutsche.demo.model.Employee;
 import com.deutsche.demo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("employee")
 public class EmployeeController {
 
-    private List<Employee> empList = new ArrayList<>();
     @Autowired
-    private EmployeeService empService = new EmployeeService();
+    private EmployeeService empService;
 
-    // Constructor to pre-populate some data
-    public EmployeeController() {
-        empList.add(new Employee(101, "Alice", 100000.0));
-    }
-
-    @GetMapping("emp")
+    @GetMapping
     public List<Employee> getAllEmployees() {
-
         return empService.getAllEmployees();
     }
 
-    @GetMapping("emp/{id}")
-    public Employee getEmployeeById(@PathVariable(name = "id") Integer Id) {
-
-        return empService.getEmployeeById(Id);
+    @GetMapping("/{id}")
+    public Employee getEmployeeById(@PathVariable(name = "id") Integer id) {
+        return empService.getEmployeeById(id);
     }
 
-    //    http://localhost:8080/api/emp
-    @PostMapping("emp")
-    public Employee addEmployee(@RequestBody Employee employee) {
+    @PostMapping
+    public Employee addEmployee(@Valid @RequestBody Employee employee) {
         return empService.addEmployee(employee);
     }
 
-    @DeleteMapping("emp/{id}")
+    @DeleteMapping("/{id}")
     public String deleteEmployee(@PathVariable Integer id) {
         boolean deleted = empService.deleteEmployee(id);
         return deleted
