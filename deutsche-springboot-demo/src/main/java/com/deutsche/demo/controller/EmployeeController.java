@@ -3,6 +3,7 @@ package com.deutsche.demo.controller;
 import com.deutsche.demo.model.Employee;
 import com.deutsche.demo.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
 
@@ -31,10 +32,8 @@ public class EmployeeController {
     }
 
     @DeleteMapping("/{id}")
-    public String deleteEmployee(@PathVariable Integer id) {
-        boolean deleted = empService.deleteEmployee(id);
-        return deleted
-                ? "Employee with ID " + id + " deleted successfully."
-                : "Employee with ID " + id + " not found.";
+    public ResponseEntity<String> deleteEmployee(@PathVariable Integer id) {
+        empService.deleteEmployee(id);
+        return ResponseEntity.ok("Employee with ID " + id + " deleted successfully.");
     }
 }
