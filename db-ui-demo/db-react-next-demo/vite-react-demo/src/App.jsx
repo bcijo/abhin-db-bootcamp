@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import EmployeeDetails from './components/employee/EmployeeDetails.jsx'
+import EmployeeList from './components/employee/EmployeeList.jsx'
 
 function MyButton() {
   return (
@@ -16,7 +16,9 @@ function App() {
       <p>Hello world!</p>
         <MyButton />
 
-        <EmployeeDetails></EmployeeDetails>
+        <EmployeeList></EmployeeList>
+
+        <img src="https://logowik.com/content/uploads/images/deutsche-bank5748.logowik.com.webp"></img>
     </>
   )
 }
